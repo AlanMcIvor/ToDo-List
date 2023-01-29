@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/brands.min.css" integrity="sha512-G/T7HQJXSeNV7mKMXeJKlYNJ0jrs8RsWzYG7rVACye+qrcUhEAYKYzaa+VFy6eFzM2+/JT1Q+eqBbZFSHmJQew==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles.css">
+    <title>To Do List</title>
+</head>
+<body>       
+    <main class="app">
+
+        <section class="greeting">
+            <h2 class="title">Hello <input type="text" id="name" placeholder="Name here">
+            </h2>
+        </section>
+
+        <section class="create-todo">
+            <h3>Create todo</h3>
+            <form id="new-todo-form">
+                <h4>Whats on your todo list</h4>
+                <input type="text" name="content" id="content" placeholder="e.g. get milk"/>
+
+                <h4>Pick a category</h4>
+                <div class="options">
+                    <label>
+                        <input type="radio" name="category" id="cat1" value="buisness"/>
+                        <span class="bubble business"></span>
+                        <div>Buisness</div>   
+                    </label>
+
+                    <label>
+                        <input type="radio" name="category" id="cat2" value="personal"/>
+                        <span class="bubble personal"></span>
+                        <div>Personal</div>   
+                    </label>
+                </div>
+
+                <input type="submit" value="Add to list" />
+            </form>
+        </section>
+
+        <section class="todo-list">
+            <h3>Task List</h3>
+            <div class="list" id="todo-list">
+                <div class="todo-item">
+                    <label>
+                        <input type="checkbox" />
+                        <span class="bubble buisness"></span>
+                    </label>
+
+                    <div class="todo-content">
+                        <input type="text" value="Make a video" readonly />
+                    </div>
+
+                    <div class="actions">
+                        <button class="edit">Edit</button>
+                        <button class="delete">Delete</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    <script src="app.js"></script> 
+</body>
+</html>
